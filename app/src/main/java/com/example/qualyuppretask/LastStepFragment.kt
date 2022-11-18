@@ -21,8 +21,8 @@ class LastStepFragment : Fragment() {
         binding =  DataBindingUtil.inflate(inflater,R.layout.fragment_last_step, container, false)
         val countries = listOf(Country(R.drawable.egypt,"+20"),Country(R.drawable.saudi,"+966"),Country(R.drawable.tunisia,"+216"))
 
-        binding.linearLayout.spinner.adapter = CountryAdapter(countries)
-        binding.linearLayout.spinner.onItemSelectedListener = object : AdapterView.OnItemSelectedListener{
+        binding.customPhoneEdittext.spinner.adapter = CountryAdapter(countries)
+        binding.customPhoneEdittext.spinner.onItemSelectedListener = object : AdapterView.OnItemSelectedListener{
             override fun onItemSelected(
                 parent: AdapterView<*>?,
                 view: View?,
@@ -30,7 +30,7 @@ class LastStepFragment : Fragment() {
                 id: Long
             ) {
                 val country = parent?.getItemAtPosition(position) as Country
-                binding.linearLayout.keyCode.text = country.key
+                binding.customPhoneEdittext.keyCode.text = country.key
             }
 
             override fun onNothingSelected(parent: AdapterView<*>?) {
@@ -39,13 +39,13 @@ class LastStepFragment : Fragment() {
 
         }
         
-        binding.linearLayout.editPhone.setOnFocusChangeListener { _, hasFocus ->
+        binding.customPhoneEdittext.editPhone.setOnFocusChangeListener { _, hasFocus ->
             if(hasFocus){
-                binding.linearLayout.hint.visibility = View.VISIBLE
-                binding.linearLayout.helperText.setTextColor(ContextCompat.getColor(requireContext(), R.color.purple_500))
+                binding.customPhoneEdittext.hint.visibility = View.VISIBLE
+                binding.customPhoneEdittext.helperText.setTextColor(ContextCompat.getColor(requireContext(), R.color.purple_500))
             }else{
-                binding.linearLayout.hint.visibility = View.GONE
-                binding.linearLayout.helperText.setTextColor(ContextCompat.getColor(requireContext(), android.R.color.tab_indicator_text))
+                binding.customPhoneEdittext.hint.visibility = View.GONE
+                binding.customPhoneEdittext.helperText.setTextColor(ContextCompat.getColor(requireContext(), android.R.color.tab_indicator_text))
             }
         }
         return binding.root

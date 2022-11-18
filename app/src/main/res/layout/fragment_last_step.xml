@@ -41,7 +41,7 @@
 
 
         <include
-            android:id="@+id/linear_layout"
+            android:id="@+id/custom_phone_edittext"
             layout="@layout/custom_edit"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -58,9 +58,10 @@
             android:textSize="@dimen/_11ssp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/linear_layout" />
+            app:layout_constraintTop_toBottomOf="@+id/custom_phone_edittext" />
 
         <com.google.android.material.button.MaterialButton
+            android:id="@+id/continue_button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/_16sdp"
