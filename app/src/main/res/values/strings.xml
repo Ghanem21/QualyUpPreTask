@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">QualyUpPreTask</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="one_last_step">One last step</string>
+    <string name="please_login_or_signup_for_a">Please login or signup for a \n<b>free</b> account to continue</string>
+    <string name="helper_text">We will use this to verify your account</string>
+    <string name="i_agree_and_comply_to_the">I agree and comply to the <font fgcolor="#FF03DAC5">community guidelines</font></string>
+    <string name="phone_number">Phone Number</string>
+    <string name="_20">+20</string>
+</resources>
